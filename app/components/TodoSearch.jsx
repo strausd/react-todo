@@ -8,13 +8,13 @@ var TodoSearch = React.createClass({
     },
     render: function () {
         return (
-            <div className="ui stackable grid centered">
-                <div className="three wide column">
+            <div className="">
+                <div className="">
                     <div className="ui fluid input">
                         <input type="Search" ref="searchText" placeholder="Search todos" onChange={this.handleSearch}/>
                     </div>
                     <div className="ui toggle checkbox">
-                        <input type="checkbox" ref="showCompleted" onChange={this.handleSearch}/>
+                        <input type="checkbox" ref="showCompleted" onChange={this.handleSearch} defaultChecked/>
                         <label>Show completed todos</label>
                     </div>
                 </div>

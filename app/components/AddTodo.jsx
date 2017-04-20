@@ -12,8 +12,8 @@ var AddTodo = React.createClass({
     },
     render: function () {
         return (
-            <div className="ui stackable grid centered">
-                <div className="three wide column">
+            <div className="">
+                <div className="">
                     <form onSubmit={this.onSubmit}>
                         <div className="ui input fluid">
                             <input type="text" placeholder="What do you need to do?" ref="todoText"/>
