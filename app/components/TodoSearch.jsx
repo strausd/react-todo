@@ -9,8 +9,8 @@ var TodoSearch = React.createClass({
     render: function () {
         return (
             <div className="">
-                <div className="">
-                    <div className="ui fluid input">
+                <div className="todo-search">
+                    <div className="ui fluid input search-input">
                         <input type="Search" ref="searchText" placeholder="Search todos" onChange={this.handleSearch}/>
                     </div>
                     <div className="ui toggle checkbox">

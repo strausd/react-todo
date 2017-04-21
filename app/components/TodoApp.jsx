@@ -52,8 +52,9 @@ var TodoApp = React.createClass({
         var {todos, showCompleted, searchText} = this.state;
         var filteredTodos = TodoAPI.filterTodos(todos, showCompleted, searchText);
         return (
-            <div className="ui stackable grid centered container">
-                <div className="six wide column">
+            <div className="ui stackable grid centered">
+                <div className="eight wide computer twelve wide tablet tablet sixteen wide mobile column">
+                    <h1>Todo App</h1>
                     <TodoSearch onSearch={this.handleSearch}/>
                     <TodoList todos={filteredTodos} onToggle={this.handleToggle}/>
                     <AddTodo onAddTodo={this.handleAddTodo}/>
