@@ -11,7 +11,7 @@ var TodoSearch = React.createClass({
             <div className="">
                 <div className="todo-search">
                     <div className="ui fluid input search-input">
-                        <input type="Search" ref="searchText" placeholder="Search todos" onChange={this.handleSearch}/>
+                        <input type="text" ref="searchText" placeholder="Search todos" onChange={this.handleSearch}/>
                     </div>
                     <div className="ui toggle checkbox">
                         <input type="checkbox" ref="showCompleted" onChange={this.handleSearch} defaultChecked/>
