@@ -21,13 +21,13 @@ module.exports = {
     },
     filterTodos: function (todos, showCompleted, searchText) {
         var filteredTodos = todos;
-        var filterText = searchText.toLowerCase();
+        var filterText = searchText ? searchText.toLowerCase() : '';
         // Filter by showCompleted
         filteredTodos = filteredTodos.filter((todo) => {
             return !todo.completed || showCompleted;
         });
-        // Filter by searchText
-        if(searchText.length > 0) {
+        // Filter by filterText
+        if(filterText.length > 0) {
             filteredTodos = filteredTodos.filter((todo) => {
                 var todoText = todo.text.toLowerCase();
                 return todoText.includes(filterText);
