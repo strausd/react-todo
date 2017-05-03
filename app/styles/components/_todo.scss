@@ -2,8 +2,15 @@
     padding: 1.2rem;
     cursor: pointer;
     display: flex;
+    width: 100%;
     position: relative;
+    .todo-row {
+        display: inline-flex;
+        flex-grow: 1;
+    }
     .ui.checkbox {
+        display: inline-flex;
+        flex-grow: 1;
         label {
             cursor: pointer;
         }
@@ -18,11 +25,46 @@
             margin-bottom: 0.3rem;
         }
     }
+
+    .delete {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        border: 1px solid $red;
+        padding: 0 .9rem;
+        opacity: 0;
+        transition: opacity .2s, background-color .2s;
+
+        a {
+            color: $red;
+            transition: color .2s;
+        }
+
+        i.icon {
+            margin: 0;
+            height: 100%;
+            font-size: 2rem;
+        }
+
+    }
+
+    .delete:hover {
+        background-color: $red;
+        a {
+            color: $grey;
+        }
+    }
+
     transition: background-color .2s, color .2s;
 }
 
 .todo:hover {
     background-color: $grey-hover;
+    .delete {
+        opacity: 1;
+    }
 }
 
 .todo:active {

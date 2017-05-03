@@ -19,7 +19,7 @@ describe('Todo', () => {
         };
         var spy = expect.createSpy();
         var todo = TestUtils.renderIntoDocument(<Todo {...todoData} dispatch={spy}/>);
-        var $el = $(ReactDOM.findDOMNode(todo));
+        var $el = $(ReactDOM.findDOMNode(todo).children);
 
         TestUtils.Simulate.click($el[0]);
 

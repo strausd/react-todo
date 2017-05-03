@@ -15,10 +15,10 @@ export var AddTodo = React.createClass({
     },
     render: function () {
         return (
-            <div className="">
+            <div className="add-todo-top">
                 <div className="add-todo">
                     <form onSubmit={this.onSubmit}>
-                        <div className="ui input fluid add-todo-input">
+                        <div className="ui input add-todo-input">
                             <input type="text" placeholder="What do you need to do?" ref="todoText"/>
                         </div>
                         <div>
